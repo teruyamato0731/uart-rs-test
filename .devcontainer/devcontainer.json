@@ -1,0 +1,17 @@
+{
+	"name": "uart-rs-test",
+	"dockerComposeFile": [
+		"docker-compose.yml"
+	],
+	"service": "uart-rs-test",
+	"workspaceFolder": "/workspaces/uart-rs-test",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"rust-lang.rust-analyzer",
+				"tamasfe.even-better-toml",
+				"serayuzgur.crates"
+			]
+		}
+	}
+}
