@@ -3,10 +3,10 @@ use serde::{Deserialize, Serialize};
 // 状態変数 x, \dot{x}, \theta, \theta
 #[derive(Serialize, Deserialize, Debug)]
 struct State {
-    x: f64,
-    dx: f64,
-    theta: f64,
-    dtheta: f64,
+    x: f32,
+    dx: f32,
+    theta: f32,
+    dtheta: f32,
 }
 
 fn main() {
