@@ -15,7 +15,7 @@ fn main() {
         println!("{:?}", cobs);
         port.write_all(&cobs).expect("Write failed!");
 
-        // 500ms待機
-        std::thread::sleep(Duration::from_millis(1500));
+        // 30ms待機
+        std::thread::sleep(Duration::from_millis(30));
     }
 }
