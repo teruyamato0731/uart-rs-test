@@ -15,14 +15,14 @@ fn main() {
     loop {
         // データが読み込まれるまで待機
         let mut buf = Vec::new();
-        reader
+        let len = reader
             .read_until(0x00, &mut buf)
             .expect("Failed to skip until 0x00");
 
         println!("{:?}", buf);
 
         // 18バイト読み込まれたら処理を行う
-        if buf.len() == 18 {
+        if len == 18 {
             let (cobs, _) = cobs_rs::unstuff::<18, 16>(buf.try_into().unwrap(), 0);
             println!("{:?}", cobs);
 
